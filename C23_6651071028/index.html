@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câu 23 - Thực Hành JavaScript Lab 2</title>
+  <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-title">
+        <h1>BÀI TẬP THỰC HÀNH JAVASCRIPT</h1>
+        <p>GV: Nguyễn Thiện Dương &bull; THỰC HÀNH LAB 2</p>
+      </div>
+      <div class="header-badge">
+        MSSV: 6651071028 &bull; Câu 23
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div>
+        <a href="../C6651071028/index.html" class="nav-link">&larr; Câu 22</a>
+      </div>
+      <div>
+        <a href="../index.html" class="nav-link"><strong>&equiv; Danh Sách 27 Câu</strong></a>
+      </div>
+      <div>
+        <a href="../C6651071028/index.html" class="nav-link">Câu 24 &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    
+      <div class="card">
+        <h2>Bảng tính lương nhân viên</h2>
+        <p class="description">Công thức: <strong>Lương tháng = Lương × Hệ số lương</strong></p>
+
+        <form id="salaryForm" onsubmit="return false;" class="table-form-container">
+          <table class="salary-table">
+            <tr>
+              <td class="tbl-label">Lương</td>
+              <td class="tbl-input">
+                <input type="number" id="baseSalary" value="1000000">
+              </td>
+            </tr>
+            <tr>
+              <td class="tbl-label">Hệ số lương</td>
+              <td class="tbl-input">
+                <input type="number" id="salaryCoefficient" value="3.2" step="0.1">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="tbl-btn-cell">
+                <button type="button" class="btn btn-calc" onclick="calculateSalary()">Tính lương tháng</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="tbl-label">Lương tháng</td>
+              <td class="tbl-input">
+                <input type="text" id="monthlySalary" readonly value="3200000">
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    
+  </main>
+
+  <footer class="footer">
+    <p>Bài thực hành Thiết Kế Web &bull; Sinh viên: <strong>Nguyễn Nhật Huy</strong> (MSSV: <strong>6651071028</strong>)</p>
+  </footer>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>

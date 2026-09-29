@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câu 24 - Thực Hành JavaScript Lab 2</title>
+  <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-title">
+        <h1>BÀI TẬP THỰC HÀNH JAVASCRIPT</h1>
+        <p>GV: Nguyễn Thiện Dương &bull; THỰC HÀNH LAB 2</p>
+      </div>
+      <div class="header-badge">
+        MSSV: 6651071028 &bull; Câu 24
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div>
+        <a href="../C6651071028/index.html" class="nav-link">&larr; Câu 23</a>
+      </div>
+      <div>
+        <a href="../index.html" class="nav-link"><strong>&equiv; Danh Sách 27 Câu</strong></a>
+      </div>
+      <div>
+        <a href="../C6651071028/index.html" class="nav-link">Câu 25 &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    
+      <div class="card">
+        <h2>Xác định thứ trong tuần</h2>
+        <p class="description">Nhập ngày, chọn tháng, nhập năm và nhấn <strong>Xuất thứ</strong> (mẫu đề bài: <em>Thứ 2 Ngày 12 tháng 1 năm 2015</em>).</p>
+
+        <form id="dateForm" onsubmit="return false;" class="date-form-box">
+          <div class="date-inline-group">
+            <span class="lbl-inline">Ngày</span>
+            <input type="number" id="inputDay" value="12" min="1" max="31">
+
+            <span class="lbl-inline">Tháng Select:</span>
+            <select id="inputMonth">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+
+            <span class="lbl-inline">năm</span>
+            <input type="number" id="inputYear" value="2015">
+          </div>
+
+          <div class="btn-center">
+            <button type="button" class="btn btn-calc" onclick="displayWeekday()">Xuất thứ</button>
+          </div>
+
+          <div class="date-output-box">
+            <p id="weekdayOutput" class="weekday-text">Thứ 2 Ngày 12 tháng 1 năm 2015</p>
+          </div>
+        </form>
+      </div>
+    
+  </main>
+
+  <footer class="footer">
+    <p>Bài thực hành Thiết Kế Web &bull; Sinh viên: <strong>Nguyễn Nhật Huy</strong> (MSSV: <strong>6651071028</strong>)</p>
+  </footer>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>

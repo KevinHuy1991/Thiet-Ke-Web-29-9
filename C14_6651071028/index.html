@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câu 14 - Thực Hành JavaScript Lab 2</title>
+  <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-title">
+        <h1>BÀI TẬP THỰC HÀNH JAVASCRIPT</h1>
+        <p>GV: Nguyễn Thiện Dương &bull; THỰC HÀNH LAB 2</p>
+      </div>
+      <div class="header-badge">
+        MSSV: 6651071028 &bull; Câu 14
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div>
+        <a href="../C6651071028/index.html" class="nav-link">&larr; Câu 13</a>
+      </div>
+      <div>
+        <a href="../index.html" class="nav-link"><strong>&equiv; Danh Sách 21 Câu</strong></a>
+      </div>
+      <div>
+        <a href="../C6651071028/index.html" class="nav-link">Câu 15 &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    
+      <div class="card">
+        <h2>Object Student trong JavaScript</h2>
+        <p class="description">Định nghĩa cấu trúc đối tượng Sinh viên gồm các thuộc tính: <code>Name</code>, <code>NumberID</code>, <code>Gender</code>.</p>
+
+        <div class="profile-card" id="studentProfile">
+          <!-- Render thông tin sinh viên -->
+        </div>
+
+        <div class="code-box">
+          <pre><code>// Định nghĩa Object Student:
+function Student(name, numberID, gender) {
+  this.Name = name;
+  this.NumberID = numberID;
+  this.Gender = gender;
+}
+
+// Khởi tạo:
+const student1 = new Student("Nguyễn Nhật Huy", "6651071028", "Nam");</code></pre>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="footer">
+    <p>Bài thực hành Thiết Kế Web &bull; Sinh viên: <strong>Nguyễn Nhật Huy</strong> (MSSV: <strong>6651071028</strong>)</p>
+  </footer>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>
