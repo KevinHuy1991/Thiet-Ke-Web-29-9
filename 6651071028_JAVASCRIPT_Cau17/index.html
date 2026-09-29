@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câu 17 - Thực Hành JavaScript Lab 2</title>
+  <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-title">
+        <h1>BÀI TẬP THỰC HÀNH JAVASCRIPT</h1>
+        <p>GV: Nguyễn Thiện Dương &bull; THỰC HÀNH LAB 2</p>
+      </div>
+      <div class="header-badge">
+        MSSV: 6651071028 &bull; Câu 17
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div>
+        <a href="../6651071028_JAVASCRIPT_Cau16/index.html" class="nav-link">&larr; Câu 16</a>
+      </div>
+      <div>
+        <a href="../index.html" class="nav-link"><strong>&equiv; Danh Sách 21 Câu</strong></a>
+      </div>
+      <div>
+        <a href="../6651071028_JAVASCRIPT_Cau18/index.html" class="nav-link">Câu 18 &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    
+      <div class="card">
+        <h2>Chuyển số nhị phân sang thập phân</h2>
+        <p class="description">Áp dụng đối tượng <code>Math.pow()</code> để tính giá trị lũy thừa cơ số 2 của từng vị trí bit.<br>Ví dụ đề bài: <strong>11011011₂ &rArr; 219₁₀</strong></p>
+
+        <div class="input-group">
+          <label for="binInput">Chuỗi nhị phân:</label>
+          <input type="text" id="binInput" value="11011011" placeholder="Nhập dãy bit 0 và 1...">
+          <button class="btn btn-primary" onclick="convertBinary()">Chuyển đổi</button>
+        </div>
+
+        <div class="result-box">
+          <p id="decResult" class="highlight-text"></p>
+        </div>
+
+        <div class="steps-box" id="binSteps"></div>
+      </div>
+    
+  </main>
+
+  <footer class="footer">
+    <p>Bài thực hành Thiết Kế Web &bull; Sinh viên: <strong>Nguyễn Nhật Huy</strong> (MSSV: <strong>6651071028</strong>)</p>
+  </footer>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>

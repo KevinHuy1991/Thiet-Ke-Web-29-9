@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câu 21 - Thực Hành JavaScript Lab 2</title>
+  <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-title">
+        <h1>BÀI TẬP THỰC HÀNH JAVASCRIPT</h1>
+        <p>GV: Nguyễn Thiện Dương &bull; THỰC HÀNH LAB 2</p>
+      </div>
+      <div class="header-badge">
+        MSSV: 6651071028 &bull; Câu 21
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div>
+        <a href="../6651071028_JAVASCRIPT_Cau20/index.html" class="nav-link">&larr; Câu 20</a>
+      </div>
+      <div>
+        <a href="../index.html" class="nav-link"><strong>&equiv; Danh Sách 21 Câu</strong></a>
+      </div>
+      <div>
+        <span style="color:#cbd5e1">Câu kế &rarr;</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    
+      <div class="card">
+        <h2>Xác định thứ trong tuần</h2>
+        <p class="description">Áp dụng đối tượng <code>Date.prototype.getDay()</code> để xác định thứ trong tuần của một ngày cụ thể (Chủ Nhật, Thứ Hai, Thứ Ba,...).</p>
+
+        <div class="input-group">
+          <label for="targetDate">Chọn hoặc nhập ngày:</label>
+          <input type="date" id="targetDate" value="2024-09-24">
+          <button class="btn btn-primary" onclick="checkDayOfWeek()">Xác định thứ</button>
+        </div>
+
+        <div class="result-box">
+          <p id="dayOfWeekResult" class="highlight-text"></p>
+        </div>
+
+        <div class="preset-box">
+          <p>Thử nhanh một số ngày:</p>
+          <button class="btn btn-outline" onclick="testDate('2024-09-24')">24/09/2024 (Thứ Ba)</button>
+          <button class="btn btn-outline" onclick="testDate('2024-09-29')">29/09/2024 (Chủ Nhật)</button>
+          <button class="btn btn-outline" onclick="testDate('2024-01-01')">01/01/2024 (Thứ Hai)</button>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="footer">
+    <p>Bài thực hành Thiết Kế Web &bull; Sinh viên: <strong>Nguyễn Nhật Huy</strong> (MSSV: <strong>6651071028</strong>)</p>
+  </footer>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>

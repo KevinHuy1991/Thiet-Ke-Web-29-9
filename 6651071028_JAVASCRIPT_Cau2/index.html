@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câu 2 - Thực Hành JavaScript Lab 2</title>
+  <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-title">
+        <h1>BÀI TẬP THỰC HÀNH JAVASCRIPT</h1>
+        <p>GV: Nguyễn Thiện Dương &bull; THỰC HÀNH LAB 2</p>
+      </div>
+      <div class="header-badge">
+        MSSV: 6651071028 &bull; Câu 2
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div>
+        <a href="../6651071028_JAVASCRIPT_Cau1/index.html" class="nav-link">&larr; Câu 1</a>
+      </div>
+      <div>
+        <a href="../index.html" class="nav-link"><strong>&equiv; Danh Sách 21 Câu</strong></a>
+      </div>
+      <div>
+        <a href="../6651071028_JAVASCRIPT_Cau3/index.html" class="nav-link">Câu 3 &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    
+      <div class="card">
+        <h2>Kiểm tra Năm Nhuận</h2>
+        <p class="description">Quy tắc: Năm chia hết cho 4 và không chia hết cho 100, HOẶC năm chia hết cho 400 là năm nhuận.</p>
+        
+        <div class="input-group">
+          <label for="yearInput">Nhập năm cần kiểm tra:</label>
+          <input type="number" id="yearInput" value="2024" placeholder="Nhập năm...">
+          <button class="btn btn-primary" onclick="checkYear()">Kiểm tra</button>
+        </div>
+
+        <div class="result-box" id="resultContainer">
+          <p id="resultText" class="highlight-text"></p>
+        </div>
+
+        <div class="preset-box">
+          <p>Thử nhanh một số năm:</p>
+          <button class="btn btn-outline" onclick="testYear(2024)">2024 (Nhuận)</button>
+          <button class="btn btn-outline" onclick="testYear(2023)">2023 (Không)</button>
+          <button class="btn btn-outline" onclick="testYear(2000)">2000 (Nhuận)</button>
+          <button class="btn btn-outline" onclick="testYear(1900)">1900 (Không)</button>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="footer">
+    <p>Bài thực hành Thiết Kế Web &bull; Sinh viên: <strong>Nguyễn Nhật Huy</strong> (MSSV: <strong>6651071028</strong>)</p>
+  </footer>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>

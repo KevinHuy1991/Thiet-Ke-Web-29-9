@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câu 18 - Thực Hành JavaScript Lab 2</title>
+  <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-title">
+        <h1>BÀI TẬP THỰC HÀNH JAVASCRIPT</h1>
+        <p>GV: Nguyễn Thiện Dương &bull; THỰC HÀNH LAB 2</p>
+      </div>
+      <div class="header-badge">
+        MSSV: 6651071028 &bull; Câu 18
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div>
+        <a href="../6651071028_JAVASCRIPT_Cau17/index.html" class="nav-link">&larr; Câu 17</a>
+      </div>
+      <div>
+        <a href="../index.html" class="nav-link"><strong>&equiv; Danh Sách 21 Câu</strong></a>
+      </div>
+      <div>
+        <a href="../6651071028_JAVASCRIPT_Cau19/index.html" class="nav-link">Câu 19 &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    
+      <div class="card">
+        <h2>Tính giai thừa (n!)</h2>
+        <p class="description">Tính n! = 1 × 2 × ... × n với n là số nguyên dương cho trước.</p>
+
+        <div class="input-group">
+          <label for="factN">Nhập số nguyên dương n:</label>
+          <input type="number" id="factN" value="5" min="0" max="25">
+          <button class="btn btn-primary" onclick="calcFactorial()">Tính n!</button>
+        </div>
+
+        <div class="result-box">
+          <p id="factResult" class="highlight-text"></p>
+        </div>
+
+        <div class="preset-box">
+          <p>Thử nhanh các giá trị:</p>
+          <button class="btn btn-outline" onclick="testFact(5)">5! (120)</button>
+          <button class="btn btn-outline" onclick="testFact(7)">7! (5040)</button>
+          <button class="btn btn-outline" onclick="testFact(10)">10! (3,628,800)</button>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="footer">
+    <p>Bài thực hành Thiết Kế Web &bull; Sinh viên: <strong>Nguyễn Nhật Huy</strong> (MSSV: <strong>6651071028</strong>)</p>
+  </footer>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>
