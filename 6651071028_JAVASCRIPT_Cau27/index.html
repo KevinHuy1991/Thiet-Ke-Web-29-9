@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câu 27 - Thực Hành JavaScript Lab 2</title>
+  <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-title">
+        <h1>BÀI TẬP THỰC HÀNH JAVASCRIPT</h1>
+        <p>GV: Nguyễn Thiện Dương &bull; THỰC HÀNH LAB 2</p>
+      </div>
+      <div class="header-badge">
+        MSSV: 6651071028 &bull; Câu 27
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div>
+        <a href="../6651071028_JAVASCRIPT_Cau26/index.html" class="nav-link">&larr; Câu 26</a>
+      </div>
+      <div>
+        <a href="../index.html" class="nav-link"><strong>&equiv; Danh Sách 27 Câu</strong></a>
+      </div>
+      <div>
+        <span style="color:#cbd5e1">Hết &rarr;</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    
+      <div class="card">
+        <h2>Quản lý giỏ hàng: Xóa dòng tương ứng</h2>
+        <p class="description">Nhấn nút <strong>Xóa</strong> ở dòng bất kỳ để xóa hàng đó khỏi bảng.</p>
+
+        <div class="table-container">
+          <table class="cart-table" id="productTable">
+            <thead>
+              <tr>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Tổng</th>
+                <th>Chức năng</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="number" class="qty-input" value="2" onchange="updateRowTotal(this)"></td>
+                <td><input type="number" class="price-input" value="1000000" onchange="updateRowTotal(this)"></td>
+                <td class="row-total">2000000</td>
+                <td>
+                  <button type="button" class="btn btn-delete" onclick="deleteRow(this)">Xóa</button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="number" class="qty-input" value="1" onchange="updateRowTotal(this)"></td>
+                <td><input type="number" class="price-input" value="500000" onchange="updateRowTotal(this)"></td>
+                <td class="row-total">500000</td>
+                <td>
+                  <button type="button" class="btn btn-delete" onclick="deleteRow(this)">Xóa</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="button-group" style="margin-top: 20px;">
+          <button type="button" class="btn btn-primary" onclick="addRow()">+ Thêm dòng mới</button>
+          <button type="button" class="btn btn-secondary" onclick="resetTable()">Khôi phục bảng mặc định</button>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="footer">
+    <p>Bài thực hành Thiết Kế Web &bull; Sinh viên: <strong>Nguyễn Nhật Huy</strong> (MSSV: <strong>6651071028</strong>)</p>
+  </footer>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>

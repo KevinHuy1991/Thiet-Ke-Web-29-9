@@ -1,0 +1,588 @@
+/* Modern Design System for Lab 2 - Web Design */
+:root {
+  --primary: #4361ee;
+  --primary-hover: #3a56d4;
+  --secondary: #3f37c9;
+  --accent: #4cc9f0;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --success: #10b981;
+  --danger: #ef4444;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.04);
+  --radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+  color: white;
+  padding: 24px 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.header-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header-title h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.header-title p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.header-badge {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-bar {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 20px;
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.nav-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 32px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.description {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+
+.btn {
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-secondary {
+  background: #64748b;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #475569;
+}
+
+.btn-action {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+}
+
+.btn-action:hover {
+  background: #e2e8f0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.badge.danger {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge.success {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* CSS cho Câu 22 */
+.simple-form-box {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 420px;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.form-row label {
+  font-weight: 600;
+  color: #334155;
+  width: 120px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.result-display-area {
+  max-width: 420px;
+  margin-top: 16px;
+}
+
+.result-label {
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.result-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  padding: 10px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 6px;
+}
+
+/* CSS cho Câu 23 */
+.table-form-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.salary-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid #1e3a8a;
+  background: #eff6ff;
+}
+
+.salary-table td {
+  border: 1px solid #1e3a8a;
+  padding: 10px 14px;
+}
+
+.tbl-label {
+  font-weight: 700;
+  color: #1e3a8a;
+  width: 38%;
+  font-size: 1rem;
+}
+
+.tbl-input input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #93c5fd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.tbl-btn-cell {
+  text-align: center;
+  background: #dbeafe;
+  padding: 12px !important;
+}
+
+.btn-calc {
+  background: #2563eb;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-weight: 600;
+  border: 1px solid #1d4ed8;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(37,99,235,0.2);
+}
+
+.btn-calc:hover {
+  background: #1d4ed8;
+}
+
+/* CSS cho Câu 24 */
+.date-form-box {
+  background: #eff6ff;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.date-inline-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.lbl-inline {
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.date-inline-group input, .date-inline-group select {
+  padding: 6px 10px;
+  border: 1px solid #3b82f6;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.date-inline-group input[type="number"] {
+  width: 90px;
+}
+
+.btn-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.date-output-box {
+  border: 2px solid #1e40af;
+  background: white;
+  padding: 12px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.weekday-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+/* CSS cho Câu 25 */
+.menu-form-container {
+  margin: 20px 0;
+}
+
+.menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #16a34a;
+  background: #f0fdf4;
+  margin-bottom: 24px;
+}
+
+.menu-table th, .menu-table td {
+  border: 1px solid #86efac;
+  padding: 12px;
+  vertical-align: top;
+}
+
+.menu-main-title {
+  background: #fef08a;
+  color: #15803d;
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 10px !important;
+}
+
+.menu-sub-header th {
+  background: #bbf7d0;
+  color: #166534;
+  font-weight: 700;
+  text-align: center;
+}
+
+.menu-select {
+  width: 100%;
+  border: 1px solid #22c55e;
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 0.95rem;
+}
+
+.time-cell {
+  width: 25%;
+}
+
+.radio-label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #166534;
+}
+
+.menu-action-cell {
+  text-align: center;
+  background: #dcfce7;
+}
+
+.bill-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.bill-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #0284c7;
+  background: #f0f9ff;
+}
+
+.bill-table th, .bill-table td {
+  border: 1px solid #7dd3fc;
+  padding: 10px 14px;
+}
+
+.bill-table th {
+  background: #bae6fd;
+  color: #0369a1;
+  font-weight: 700;
+  text-align: left;
+}
+
+.bill-total-row td {
+  font-weight: 800;
+  background: #e0f2fe;
+  color: #0c4a6e;
+  font-size: 1.05rem;
+}
+
+.surcharge-row td {
+  color: #e11d48;
+}
+
+/* CSS cho Câu 26 */
+.canchi-box {
+  background: #f0fdfa;
+  border: 2px solid #14b8a6;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.canchi-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.canchi-header h3 {
+  color: #0f766e;
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+
+.canchi-content {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.canchi-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.canchi-col label {
+  font-weight: 700;
+  color: #115e59;
+  font-size: 0.95rem;
+}
+
+.canchi-col input {
+  padding: 10px 12px;
+  border: 1px solid #2dd4bf;
+  border-radius: 6px;
+  font-size: 1.1rem;
+}
+
+.canchi-btn-col {
+  padding-bottom: 4px;
+}
+
+.btn-arrow {
+  background: #0d9488;
+  color: white;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-arrow:hover {
+  background: #0f766e;
+}
+
+.validate-msg {
+  margin-top: 14px;
+  text-align: center;
+}
+
+/* CSS cho Câu 27 */
+.table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #cbd5e1;
+  background: #ffffff;
+}
+
+.cart-table th, .cart-table td {
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  text-align: center;
+}
+
+.cart-table th {
+  background: #e2e8f0;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.cart-table input {
+  width: 120px;
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.btn-delete {
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+  border-radius: 16px;
+  padding: 6px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  background: white;
+}

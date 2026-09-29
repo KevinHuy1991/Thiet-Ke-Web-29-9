@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Báo Cáo Thực Hành Lab 2 - JavaScript (Câu 1 - 21)</title>
+  <title>Báo Cáo Thực Hành Lab 2 - JavaScript (Câu 1 - 27)</title>
   <style>
     :root {
       --primary: #4361ee;
@@ -60,13 +60,41 @@
       margin: 40px auto;
       padding: 0 24px;
     }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
     .section-title {
       font-size: 1.4rem;
       font-weight: 700;
-      margin-bottom: 24px;
       display: flex;
       align-items: center;
       gap: 10px;
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.2s;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
     }
     .grid {
       display: grid;
@@ -92,6 +120,12 @@
     .portal-card-header {
       margin-bottom: 12px;
     }
+    .header-tags {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
     .portal-badge {
       display: inline-block;
       background: #e0e7ff;
@@ -100,12 +134,21 @@
       font-weight: 700;
       padding: 4px 10px;
       border-radius: 9999px;
-      margin-bottom: 8px;
+    }
+    .cat-badge {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 9999px;
     }
     .portal-card-header h3 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--text-main);
       font-weight: 600;
+      line-height: 1.4;
     }
     .portal-card-desc {
       font-size: 0.88rem;
@@ -154,246 +197,401 @@
       <div class="student-info-bar">
         <span>Sinh viên: <strong>Nguyễn Nhật Huy</strong></span>
         <span>MSSV: <strong>6651071028</strong></span>
-        <span>Bài tập: <strong>Câu 1 đến Câu 21</strong></span>
+        <span>Bài tập: <strong>Câu 1 đến Câu 27</strong> (Hoàn thành)</span>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <div class="section-title">
-      <span>📂</span> Danh sách 21 bài thực hành JavaScript (Cấu trúc thư mục chuẩn)
+    <div class="section-header">
+      <div class="section-title">
+        <span>📂</span> Danh sách 27 bài thực hành JavaScript
+      </div>
+      <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterCat('all')">Tất cả (27)</button>
+        <button class="tab-btn" onclick="filterCat('Cơ bản')">Cơ bản (1-10)</button>
+        <button class="tab-btn" onclick="filterCat('Function & Object')">Function & Object (11-21)</button>
+        <button class="tab-btn" onclick="filterCat('Xử lý sự kiện với form')">Xử lý Form (22-27)</button>
+      </div>
     </div>
 
-    <div class="grid">
+    <div class="grid" id="portalGrid">
       
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Cơ bản">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 1</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 1</span>
+            <span class="cat-badge">Cơ bản</span>
+          </div>
           <h3>Tính diện tích hình tam giác (ba cạnh 5, 6, 7)</h3>
         </div>
-        <p class="portal-card-desc">Tìm diện tích hình tam giác có độ dài ba cạnh là 5, 6, 7. Xuất kết quả ở: Tab Console, Hộp thoại trình duyệt (window.alert), và Giao diện trang web.</p>
+        <p class="portal-card-desc">Tính diện tích tam giác Heron. Xuất ra Tab Console, Alert và Giao diện web.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau1/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Cơ bản">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 2</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 2</span>
+            <span class="cat-badge">Cơ bản</span>
+          </div>
           <h3>Xác định năm nhuận</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình JavaScript để xác định xem một năm cho trước nhất định có phải là năm nhuận hay không. Xuất kết quả ở một vị trí tùy ý.</p>
+        <p class="portal-card-desc">Kiểm tra năm nhuận theo quy tắc chia hết cho 4, 100 và 400. Xuất kết quả trên trang web.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau2/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Cơ bản">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 3</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 3</span>
+            <span class="cat-badge">Cơ bản</span>
+          </div>
           <h3>Tìm số lớn nhất trong ba số</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình Javascript để tìm ra số lớn nhất trong ba số đã cho (giả sử là 15, 28, 9). Xuất kết quả ở một nơi tùy ý.</p>
+        <p class="portal-card-desc">Tìm số lớn nhất trong 3 số cho trước (15, 28, 9).</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau3/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Cơ bản">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 4</span>
-          <h3>In các số lẻ < 100 trừ 5, 7, 93</h3>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 4</span>
+            <span class="cat-badge">Cơ bản</span>
+          </div>
+          <h3>In các số lẻ &lt; 100 trừ 5, 7, 93</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình JavaScript in ra tất cả các số lẻ nhỏ hơn 100 trừ các số 5, 7, 93. Xuất kết quả ở một nơi tùy ý.</p>
+        <p class="portal-card-desc">Sử dụng vòng lặp và lệnh continue để lọc các số lẻ từ 1 đến 99.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau4/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Cơ bản">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 5</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 5</span>
+            <span class="cat-badge">Cơ bản</span>
+          </div>
           <h3>Kiểm tra số nguyên tố (Prompt & Alert)</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình JavaScript cho phép người dùng nhập vào một số nguyên dương bất kì từ hộp thoại Prompt. Kiểm tra số đã nhập có phải là số nguyên tố hay không. Xuất kết quả ở hộp thoại của trình duyệt.</p>
+        <p class="portal-card-desc">Nhập số nguyên dương từ Prompt, kiểm tra tính nguyên tố và xuất kết quả qua Alert.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau5/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Cơ bản">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 6</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 6</span>
+            <span class="cat-badge">Cơ bản</span>
+          </div>
           <h3>Giải phương trình bậc 2 (Prompt & Alert)</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình Javascript giải phương trình bậc 2: ax² + bx + c = 0. Với a, b, c là các hệ số nhập ở hộp thoại Prompt và xuất kết quả ra hộp thoại của trình duyệt.</p>
+        <p class="portal-card-desc">Giải ax² + bx + c = 0 với các hệ số nhập từ hộp thoại Prompt và xuất nghiệm qua Alert.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau6/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Cơ bản">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 7</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 7</span>
+            <span class="cat-badge">Cơ bản</span>
+          </div>
           <h3>Tìm ngày kế tiếp (Prompt & console.log)</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình JavaScript nhập vào 1 ngày cho trước (ngày, tháng, năm) từ hộp thoại Prompt. Tìm ngày kế ngày vừa nhập (ngày, tháng, năm) và xuất kết quả ra ở tab console.log.</p>
+        <p class="portal-card-desc">Nhập ngày, tháng, năm từ Prompt, tính ngày kế tiếp và xuất ra tab console.log.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau7/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Cơ bản">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 8</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 8</span>
+            <span class="cat-badge">Cơ bản</span>
+          </div>
           <h3>Đọc số nguyên có 2 chữ số (Prompt & Alert)</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình Javascript nhập 1 số nguyên có 2 chữ số cho trước từ hộp thoại prompt. Hãy in ra cách đọc của số nguyên này ở hộp thoại của trình duyệt.</p>
+        <p class="portal-card-desc">Nhập số nguyên có 2 chữ số (10 - 99) từ Prompt và in cách đọc tiếng Việt ra hộp thoại Alert.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau8/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Cơ bản">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 9</span>
-          <h3>Viết hoa chữ cái đầu tiên của mỗi từ (toUpperCase)</h3>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 9</span>
+            <span class="cat-badge">Cơ bản</span>
+          </div>
+          <h3>Viết hoa chữ cái đầu tiên (toUpperCase)</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình JavaScript để viết hoa chữ cái đầu tiên của mỗi từ trong một chuỗi cho trước. (tìm hiểu hàm toUpperCase() ). Ví dụ: “need not to know” => “Need Not To Know”</p>
+        <p class="portal-card-desc">Chuyển đổi chuỗi cho trước thành dạng viết hoa chữ cái đầu mỗi từ (Ví dụ: "Need Not To Know").</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau9/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Cơ bản">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 10</span>
-          <h3>Tính tổng n + n/2 + n/4 + n/8 + ...</h3>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 10</span>
+            <span class="cat-badge">Cơ bản</span>
+          </div>
+          <h3>Tính tổng dãy số nguyên n + n/2 + n/4 + ...</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình Javascript tính tổng của n + n/2 + n/4 + n/8 + .... trong đó n là số nguyên dương cho trước và tất cả các phép chia đều là số nguyên. Xuất kết quả ở hộp thoại của trình duyệt.</p>
+        <p class="portal-card-desc">Tính tổng chuỗi chia nguyên liên tiếp với n nguyên dương nhập từ Prompt, xuất Alert.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau10/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Function & Object">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 11</span>
-          <h3>Đảo ngược một số nguyên</h3>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 11</span>
+            <span class="cat-badge">Function & Object</span>
+          </div>
+          <h3>Hàm đảo ngược một số nguyên</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình JavaScript chứa hàm đảo ngược một số nguyên. Xuất kết quả ở vị trí tùy ý. Ví dụ: 654321 => 123456</p>
+        <p class="portal-card-desc">Đảo ngược thứ tự các chữ số của một số nguyên (Ví dụ: 654321 => 123456).</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau11/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Function & Object">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 12</span>
-          <h3>Tính giá trị lũy thừa b^n</h3>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 12</span>
+            <span class="cat-badge">Function & Object</span>
+          </div>
+          <h3>Hàm tính giá trị lũy thừa bⁿ</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình JavaScript chứa hàm tính giá trị của b^n, trong đó b và n là các số nguyên dương cho trước. Xuất kết quả ở vị trí tùy ý.</p>
+        <p class="portal-card-desc">Tính giá trị bⁿ với b và n là các số nguyên dương cho trước.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau12/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Function & Object">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 13</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 13</span>
+            <span class="cat-badge">Function & Object</span>
+          </div>
           <h3>Liệt kê các số nguyên tố nhỏ hơn n</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình Javascript liệt kê tất cả các số nguyên tố nhỏ hơn n, với n là số nguyên dương cho trước. Xuất kết quả ở vị trí tùy ý.</p>
+        <p class="portal-card-desc">Tìm và hiển thị toàn bộ các số nguyên tố nhỏ hơn một số n cho trước.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau13/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Function & Object">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 14</span>
-          <h3>Định nghĩa và khởi tạo Object Student</h3>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 14</span>
+            <span class="cat-badge">Function & Object</span>
+          </div>
+          <h3>Định nghĩa Object Student</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình Javascript để định nghĩa một object Student gồm các thuộc tính {Name, NumberID, Gender}. Khởi tạo một đối tượng Student và in các thông tin của đối tượng này ra màn hình.</p>
+        <p class="portal-card-desc">Định nghĩa object Student gồm {Name, NumberID, Gender}, khởi tạo và in ra màn hình.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau14/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Function & Object">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 15</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 15</span>
+            <span class="cat-badge">Function & Object</span>
+          </div>
           <h3>Thao tác với Object User</h3>
         </div>
-        <p class="portal-card-desc">Cho đối tượng User được định nghĩa: User = {Name: "Max", Age: 20}. Khởi tạo đối tượng u và thực hiện: a) In thông tin u, b) Thêm thuộc tính Surname: "Lee", c) Thay đổi Age thành 30.</p>
+        <p class="portal-card-desc">Đối tượng User = {Name: "Max", Age: 20}: in thông tin, thêm Surname = "Lee", sửa Age = 30.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau15/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Function & Object">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 16</span>
-          <h3>Object HinhTru (Thể tích & Diện tích toàn phần)</h3>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 16</span>
+            <span class="cat-badge">Function & Object</span>
+          </div>
+          <h3>Đối tượng HinhTru (Thể tích & Diện tích toàn phần)</h3>
         </div>
-        <p class="portal-card-desc">Cho đối tượng HinhTru = {radius: 10, height: 15}. a) In thông tin thể tích hình trụ. b) Cập nhật height = 30, in giá trị diện tích toàn phần lúc này.</p>
+        <p class="portal-card-desc">Hình trụ r = 10, h = 15: tính thể tích V, sau đó cập nhật h = 30 và tính diện tích toàn phần Stp.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau16/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Function & Object">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 17</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 17</span>
+            <span class="cat-badge">Function & Object</span>
+          </div>
           <h3>Chuyển số nhị phân thành thập phân (Math)</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình áp dụng đối tượng Math trong Javascript để chuyển số nhị phân thành số thập phân. Xuất kết quả ở vị trí tùy ý. Ví dụ: 11011011₂ => 219₁₀.</p>
+        <p class="portal-card-desc">Áp dụng đối tượng Math.pow để chuyển đổi số nhị phân thành số thập phân (11011011₂ => 219₁₀).</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau17/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Function & Object">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 18</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 18</span>
+            <span class="cat-badge">Function & Object</span>
+          </div>
           <h3>Tính giai thừa số nguyên dương n (Math)</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình áp dụng đối tượng Math trong Javascript để tính giai thừa của một số nguyên dương n cho trước. Xuất kết quả ở vị trí tùy ý.</p>
+        <p class="portal-card-desc">Áp dụng đối tượng Math để tính giai thừa n! của số nguyên dương cho trước.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau18/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Function & Object">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 19</span>
-          <h3>Máy tính lãi suất đơn giản (Math)</h3>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 19</span>
+            <span class="cat-badge">Function & Object</span>
+          </div>
+          <h3>Máy tính lãi suất đầu tư (Math)</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình áp dụng đối tượng Math trong Javascript xây dựng một máy tính lãi suất đơn giản: Cho trước số tiền gốc, lãi suất hàng năm và số năm. Tính tổng số tiền sau năm n nếu số tiền gốc được đầu tư với lãi suất cố định hàng năm.</p>
+        <p class="portal-card-desc">Áp dụng Math.pow tính tổng số tiền nhận được sau n năm với lãi suất cố định hàng năm.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau19/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Function & Object">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 20</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 20</span>
+            <span class="cat-badge">Function & Object</span>
+          </div>
           <h3>Đối tượng Date - Ngày giờ hệ thống (Alert)</h3>
         </div>
-        <p class="portal-card-desc">Minh hoạ cách khai báo và sử dụng đối tượng Date trong JavaScript để hiển thị ngày giờ hiện tại của hệ thống. Xuất kết quả ở hộp thoại của trình duyệt.</p>
+        <p class="portal-card-desc">Khai báo và sử dụng Date để lấy ngày giờ hệ thống hiện tại, xuất qua hộp thoại Alert của trình duyệt.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau20/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
-      <div class="portal-card">
+      <div class="portal-card" data-cat="Function & Object">
         <div class="portal-card-header">
-          <span class="portal-badge">Câu 21</span>
+          <div class="header-tags">
+            <span class="portal-badge">Câu 21</span>
+            <span class="cat-badge">Function & Object</span>
+          </div>
           <h3>Xác định thứ trong tuần của một ngày (Date)</h3>
         </div>
-        <p class="portal-card-desc">Viết chương trình áp dụng đối tượng Date trong Javascript xác định thứ trong tuần của một ngày cụ thể (ví dụ: Thứ Ba). Xuất kết quả ở vị trí tùy ý.</p>
+        <p class="portal-card-desc">Áp dụng getDay() của Date để xác định thứ trong tuần (Thứ Hai, Thứ Ba,...) của ngày cụ thể.</p>
         <div class="portal-card-footer">
           <a href="6651071028_JAVASCRIPT_Cau21/index.html" class="portal-btn">Mở bài làm &rarr;</a>
+        </div>
+      </div>
+    
+      <div class="portal-card" data-cat="Xử lý sự kiện với form">
+        <div class="portal-card-header">
+          <div class="header-tags">
+            <span class="portal-badge">Câu 22</span>
+            <span class="cat-badge">Xử lý sự kiện với form</span>
+          </div>
+          <h3>Form tính nhân hoặc chia hai số</h3>
+        </div>
+        <p class="portal-card-desc">Nhập vào hai số nguyên, nhấn nút Multiply để nhân hoặc nút Divide để chia và xuất kết quả ra web.</p>
+        <div class="portal-card-footer">
+          <a href="6651071028_JAVASCRIPT_Cau22/index.html" class="portal-btn">Mở bài làm &rarr;</a>
+        </div>
+      </div>
+    
+      <div class="portal-card" data-cat="Xử lý sự kiện với form">
+        <div class="portal-card-header">
+          <div class="header-tags">
+            <span class="portal-badge">Câu 23</span>
+            <span class="cat-badge">Xử lý sự kiện với form</span>
+          </div>
+          <h3>Tính tiền lương bằng Table Form</h3>
+        </div>
+        <p class="portal-card-desc">Dùng các tag &lt;table&gt;, &lt;form&gt;, &lt;input&gt; để tính lương tháng = Lương × Hệ số lương.</p>
+        <div class="portal-card-footer">
+          <a href="6651071028_JAVASCRIPT_Cau23/index.html" class="portal-btn">Mở bài làm &rarr;</a>
+        </div>
+      </div>
+    
+      <div class="portal-card" data-cat="Xử lý sự kiện với form">
+        <div class="portal-card-header">
+          <div class="header-tags">
+            <span class="portal-badge">Câu 24</span>
+            <span class="cat-badge">Xử lý sự kiện với form</span>
+          </div>
+          <h3>Xuất thứ trong tuần từ ngày tháng năm</h3>
+        </div>
+        <p class="portal-card-desc">Nhập ngày, chọn tháng từ dropdown select, nhập năm và xuất định dạng "Thứ X Ngày ... tháng ... năm ...".</p>
+        <div class="portal-card-footer">
+          <a href="6651071028_JAVASCRIPT_Cau24/index.html" class="portal-btn">Mở bài làm &rarr;</a>
+        </div>
+      </div>
+    
+      <div class="portal-card" data-cat="Xử lý sự kiện với form">
+        <div class="portal-card-header">
+          <div class="header-tags">
+            <span class="portal-badge">Câu 25</span>
+            <span class="cat-badge">Xử lý sự kiện với form</span>
+          </div>
+          <h3>Tính tiền thực đơn quán ăn (Thức ăn & Nước uống)</h3>
+        </div>
+        <p class="portal-card-desc">Cho phép chọn nhiều món ăn/thức uống, tính tiền và phụ thu thêm 10% nếu dùng vào ban đêm.</p>
+        <div class="portal-card-footer">
+          <a href="6651071028_JAVASCRIPT_Cau25/index.html" class="portal-btn">Mở bài làm &rarr;</a>
+        </div>
+      </div>
+    
+      <div class="portal-card" data-cat="Xử lý sự kiện với form">
+        <div class="portal-card-header">
+          <div class="header-tags">
+            <span class="portal-badge">Câu 26</span>
+            <span class="cat-badge">Xử lý sự kiện với form</span>
+          </div>
+          <h3>Tính Can Chi của năm âm lịch (Validation Textbox)</h3>
+        </div>
+        <p class="portal-card-desc">Chuyển năm dương lịch sang Can Chi năm âm lịch, có validate bắt buộc nhập và kiểm tra số nguyên.</p>
+        <div class="portal-card-footer">
+          <a href="6651071028_JAVASCRIPT_Cau26/index.html" class="portal-btn">Mở bài làm &rarr;</a>
+        </div>
+      </div>
+    
+      <div class="portal-card" data-cat="Xử lý sự kiện với form">
+        <div class="portal-card-header">
+          <div class="header-tags">
+            <span class="portal-badge">Câu 27</span>
+            <span class="cat-badge">Xử lý sự kiện với form</span>
+          </div>
+          <h3>Bảng giỏ hàng có chức năng Xóa dòng</h3>
+        </div>
+        <p class="portal-card-desc">Bảng danh sách số lượng, đơn giá, tổng tiền và xóa dòng tương ứng khi nhấn nút Xóa.</p>
+        <div class="portal-card-footer">
+          <a href="6651071028_JAVASCRIPT_Cau27/index.html" class="portal-btn">Mở bài làm &rarr;</a>
         </div>
       </div>
     
@@ -403,5 +601,21 @@
   <footer>
     <p>Trường Đại Học &bull; Môn Học Thiết Kế Web &bull; Hoàn thành đúng 100% cấu trúc yêu cầu của GV</p>
   </footer>
+
+  <script>
+    function filterCat(cat) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.portal-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>

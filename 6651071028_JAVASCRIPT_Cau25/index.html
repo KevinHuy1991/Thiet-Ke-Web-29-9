@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câu 25 - Thực Hành JavaScript Lab 2</title>
+  <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-title">
+        <h1>BÀI TẬP THỰC HÀNH JAVASCRIPT</h1>
+        <p>GV: Nguyễn Thiện Dương &bull; THỰC HÀNH LAB 2</p>
+      </div>
+      <div class="header-badge">
+        MSSV: 6651071028 &bull; Câu 25
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div>
+        <a href="../6651071028_JAVASCRIPT_Cau24/index.html" class="nav-link">&larr; Câu 24</a>
+      </div>
+      <div>
+        <a href="../index.html" class="nav-link"><strong>&equiv; Danh Sách 27 Câu</strong></a>
+      </div>
+      <div>
+        <a href="../6651071028_JAVASCRIPT_Cau26/index.html" class="nav-link">Câu 26 &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    
+      <div class="card">
+        <h2>Hóa đơn thanh toán Quán Ăn</h2>
+        <p class="description">Giữ phím <kbd>Ctrl</kbd> (hoặc phím Command trên Mac) và click chuột để chọn nhiều món ăn/nước uống cùng lúc.</p>
+
+        <form id="menuForm" onsubmit="return false;" class="menu-form-container">
+          <table class="menu-table">
+            <thead>
+              <tr class="menu-header-row">
+                <th colspan="3" class="menu-main-title">THỰC ĐƠN</th>
+              </tr>
+              <tr class="menu-sub-header">
+                <th>Thức ăn</th>
+                <th>Nước uống</th>
+                <th>Thời điểm</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <select id="foodSelect" multiple size="7" class="menu-select">
+                    <option value="BunBo|20000" selected>Bún bò (20.000đ)</option>
+                    <option value="HuTieu|18000">Hủ tiếu (18.000đ)</option>
+                    <option value="BanhCanh|17000">Bánh canh (17.000đ)</option>
+                    <option value="PhoBo|19000">Phở bò (19.000đ)</option>
+                    <option value="Nuoi|15000" selected>Nuôi (15.000đ)</option>
+                    <option value="BanhMiThit|12000">Bánh mì thịt (12.000đ)</option>
+                    <option value="BanhCuon|15000">Bánh cuốn (15.000đ)</option>
+                  </select>
+                </td>
+                <td>
+                  <select id="drinkSelect" multiple size="7" class="menu-select">
+                    <option value="CaPheDa|12000" selected>Cà phê đá (12.000đ)</option>
+                    <option value="CaPheSua|15000">Cà phê sữa (15.000đ)</option>
+                    <option value="ChanhDay|13000" selected>Chanh dây (13.000đ)</option>
+                    <option value="ChanhMuoi|12000">Chanh muối (12.000đ)</option>
+                    <option value="XiMuoi|14000">Xí muội (14.000đ)</option>
+                    <option value="SuaTuoi|13000">Sữa tươi (13.000đ)</option>
+                    <option value="CamVat|17000">Cam vắt (17.000đ)</option>
+                  </select>
+                </td>
+                <td class="time-cell">
+                  <label class="radio-label">
+                    <input type="radio" name="timePeriod" value="day" checked> Ban ngày
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="timePeriod" value="night"> Ban đêm (+10%)
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" class="menu-action-cell">
+                  <button type="button" class="btn btn-calc" onclick="calculateBill()">Tính tiền</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div id="billSection" class="bill-container">
+            <table class="bill-table">
+              <thead>
+                <tr>
+                  <th>Các món đã dùng</th>
+                  <th>Tiền</th>
+                </tr>
+              </thead>
+              <tbody id="billItemsBody">
+                <!-- Nội dung các món đã dùng -->
+              </tbody>
+              <tfoot>
+                <tr class="bill-total-row">
+                  <td>Tổng tiền</td>
+                  <td id="billTotalAmount">60000 đồng</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </form>
+      </div>
+    
+  </main>
+
+  <footer class="footer">
+    <p>Bài thực hành Thiết Kế Web &bull; Sinh viên: <strong>Nguyễn Nhật Huy</strong> (MSSV: <strong>6651071028</strong>)</p>
+  </footer>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câu 22 - Thực Hành JavaScript Lab 2</title>
+  <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-title">
+        <h1>BÀI TẬP THỰC HÀNH JAVASCRIPT</h1>
+        <p>GV: Nguyễn Thiện Dương &bull; THỰC HÀNH LAB 2</p>
+      </div>
+      <div class="header-badge">
+        MSSV: 6651071028 &bull; Câu 22
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div>
+        <a href="../6651071028_JAVASCRIPT_Cau21/index.html" class="nav-link">&larr; Câu 21</a>
+      </div>
+      <div>
+        <a href="../index.html" class="nav-link"><strong>&equiv; Danh Sách 27 Câu</strong></a>
+      </div>
+      <div>
+        <a href="../6651071028_JAVASCRIPT_Cau23/index.html" class="nav-link">Câu 23 &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    
+      <div class="card">
+        <h2>Máy tính Nhân & Chia hai số</h2>
+        <p class="description">Nhập vào hai số nguyên và nhấn nút <strong>Multiply</strong> hoặc <strong>Divide</strong> để tính toán.</p>
+
+        <form id="calcForm" onsubmit="return false;" class="simple-form-box">
+          <div class="form-row">
+            <label for="num1">1st Number :</label>
+            <input type="number" id="num1" value="12" required>
+          </div>
+          <div class="form-row">
+            <label for="num2">2nd Number :</label>
+            <input type="number" id="num2" value="10" required>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-action" onclick="multiply()">Multiply</button>
+            <button type="button" class="btn btn-action" onclick="divide()">Divide</button>
+          </div>
+        </form>
+
+        <div class="result-display-area">
+          <p class="result-label">The Result Is :</p>
+          <div id="resultVal" class="result-value">120</div>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="footer">
+    <p>Bài thực hành Thiết Kế Web &bull; Sinh viên: <strong>Nguyễn Nhật Huy</strong> (MSSV: <strong>6651071028</strong>)</p>
+  </footer>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>
